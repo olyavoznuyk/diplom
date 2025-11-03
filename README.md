@@ -527,12 +527,35 @@ diplom/
 
 ![alt text](./img/manual_tag.png)
 
-
-
 **Результат**
 
 ![alt text](./img/manual_trigger.png)
 
-4. Автоматический запуск
+4. Автоматический запуск (v1.1.0)
 
+* тег
 
+```sh
+git tag v1.1.0
+git push origin v1.1.0
+
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 174.45 KiB | 1.32 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:olyavoznuyk/diplom.git
+ * [new tag]         v1.1.0 -> v1.1.0
+ ```
+
+* докерхаб
+
+![alt text](./img/dockerhub1.1.0.png)
+
+* пайплайн (автостарт по триггеру на тег)
+
+![alt text](./img/auto_trigger.png)
+
+5. Поменяем содержимое контейнера 
