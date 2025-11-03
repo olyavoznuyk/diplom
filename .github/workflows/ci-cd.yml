@@ -110,6 +110,6 @@ jobs:
         kubectl apply -f k8s/ -n ${{ env.K8S_NAMESPACE }}
         
         # Деплой с проверкой
-        kubectl rollout status deployment/your-app-deployment -n ${{ env.K8S_NAMESPACE }}
+        kubectl rollout status deployment/app-web -n ${{ env.K8S_NAMESPACE }}
         
         echo "Deployment completed successfully!"
