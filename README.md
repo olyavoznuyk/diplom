@@ -500,3 +500,26 @@ statefulset.apps/prometheus-k8s      2/2     66s
 
 ## Установка и настройка CI/CD
 
+1. Добавляем секреты (по имени)
+
+* генерим в `dockerhub` токен, добавляем содержимое в секреты `github actions`
+
+![alt text](./img/dockernub_token.png)
+
+![alt text](./img/secrets.png)
+
+2. Добавляем `workflow` - указано в [ci-cd.yaml](./.github/workflow/ci-cd.yaml)
+
+Структура деплоя 
+
+```
+diplom/
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yaml
+├── k8s/
+│   ├── deployment.yaml
+│   └── service.yaml
+├── Dockerfile
+```
+
