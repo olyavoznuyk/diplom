@@ -523,3 +523,8 @@ diplom/
 ├── Dockerfile
 ```
 
+3. Ручной триггер деплоймента - с указанием тега (v1.0.1)
+
+![alt text](./img/manual_tag.png)
+
+

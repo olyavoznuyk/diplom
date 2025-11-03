@@ -14,7 +14,7 @@ on:
 env:
   REGISTRY: docker.io
   IMAGE_NAME: avt548499/avt548499
-  K8S_NAMESPACE: default
+  K8S_NAMESPACE: stage
 
 jobs:
   build-and-push:
