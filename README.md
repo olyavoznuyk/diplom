@@ -558,4 +558,53 @@ To github.com:olyavoznuyk/diplom.git
 
 ![alt text](./img/auto_trigger.png)
 
-5. Поменяем содержимое контейнера 
+5. Поменяем содержимое страницы
+
+* меняем содержимое веб-страницы [в index.html](./content/index.html) на
+
+```html
+<h2>Привет, это сервис версии 2.0.0! А меня зовут Оля!</h2>
+```
+
+* Пушим тег, триггерится пайплайн, обновляется манифест
+
+```bash
+git tag v2.0.0
+git push origin v2.0.0
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 276.20 KiB | 2.09 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:olyavoznuyk/diplom.git
+ * [new tag]         v2.0.0 -> v2.0.0
+```
+
+![alt text](./img/dockerhub2.0.0.png)
+
+![alt text](./img/build2.0.0.png)
+
+**Итог**
+
+![alt text](./img/final.png)
+
+## Итоги
+
+Настроен полный конвейер CI/CD, который собирает код и доставляет его на условный прод.
+
+Что хотелось бы улучшить:
+
+1. Семантическое версионирование с самантическими коммитами (fix:, feat:, perf:, docs: и остальное)
+
+2. Балансер Nginx 
+
+3. Тесты для приложения
+
+4. Контур проверки SAST\DAST сканирования - Trivy, Snyuk, SonarQube
+
+
+# СПАСИБО ОГРОМНОЕ ЗА КУРС, БЫЛО ОЧЕНЬ ПРИЯТНО И ПОЛЕЗНО! КОТИК НА ПАМЯТЬ =)
+
+![alt text](./img/cat.png)
